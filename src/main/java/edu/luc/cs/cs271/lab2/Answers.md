@@ -2,10 +2,9 @@
 
 ## What is the complexity of each of the four search methods in terms of array or list size n?
 
-- The search methods used were array and list for "findTeamPosition" O(n) this methods are linear because it starts at the begining of the array/list. 
+- For both array and list"findTeamPosition" O(n) we use a linear search because it starts at the begining of the array/list. 
 - For "findTeamPositionMinFunding" O(n) we also used a linear search (starts the search at the begining value and checks 1 by 1).
 - For "findTeamMinFundingFast" O(log n) we used a binary search which means it starts the search at the middle value of the array if the middle value is not a match it will determine which side (if any) the correct value is at and eliminated the search on the other half.
-
 
 ## What happens in the case of binary search if the array is not sorted?
 
