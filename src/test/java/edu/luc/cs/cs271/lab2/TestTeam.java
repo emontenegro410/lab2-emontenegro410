@@ -19,6 +19,8 @@ public class TestTeam {
     }
   }
 
+
+// Done TODO testConstructorValidHeadcoach
   @Test
   public void testConstructorValidHeadcoach(){
     try {
@@ -29,6 +31,7 @@ public class TestTeam {
     }
   }
 
+  // Done TODO testConstructorValidFunding
   @Test
   public void testConstructorValidFunding(){
     try {
@@ -38,7 +41,8 @@ public class TestTeam {
       //if we landed here, we're good!
     }
   }
-
+  
+  
   @Test
   public void testGetName() {
     final String name = "USA";
@@ -46,6 +50,7 @@ public class TestTeam {
     assertEquals(name, t.getName());
   }
 
+  // Done TODO testGetHeadcoach
   @Test
   public void testGetCoach() {
     final String coach = "Klinsmann";
@@ -53,6 +58,7 @@ public class TestTeam {
     assertEquals(coach, t.getHeadcoach());
   }
 
+  // Done TODO testGetFunding
   @Test
   public void testGetFunding() {
     final int funds = 500;
