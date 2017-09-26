@@ -21,13 +21,13 @@ public class Team {
       throw new IllegalArgumentException("headcoach is null");
     }
     // DONE TODO validity checking for funding
-    if (funding == null) {
+    if (funding == 0) {
       throw new IllegalArgumentException("funding is null");
     }
     
     this.name = name;
-    this.headcoach=headcoach
-    this.funding=funding
+    this.headcoach=headcoach;
+    this.funding=funding;
     // Done TODO complete this constructor
   }
 

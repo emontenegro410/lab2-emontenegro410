@@ -25,11 +25,11 @@ public class Search {
   public static Optional<Integer> findTeamPosition(final List<Team> list, final String key) {
     // DONE TODO complete this method
     // This is to get the list size
-    final int size = list.length;
+    final int size = list.size();
     // Runs through a for loop to check
       for (int i=0; i<size; i++) {
         // Gets the current item at index and compare name to key
-        if (list[i].getName().equals(key)) {     
+        if (list.get(i).getName().equals(key)) {    
           //Return the index where the item with key is located
           return Optional.of(i);
         }
@@ -72,20 +72,23 @@ public class Search {
     // Initially search the entire array
     int low = 0;
     int high = size - 1;
-
     // Keep going as long as there is more than one item to be checked
     while(low <= high) {
-      int mid = (low+high)/2;
+      final int mid = (low+high)/2;
         // Eliminate the wrong half of the array
+        // Return current item only if it meets the condition!
     if (low <= high && arr[low].getFunding() >= minFunding) {
       return Optional.of(low);
-    else if (arr[low].getFunding() < minFunding && arr[mid].getFunding() < minFunding)
+    }
+    else if (arr[low].getFunding() < minFunding && arr[mid].getFunding() < minFunding) {
+  
               low = mid + 1;
-    else 
-    // Return current item only if it meets the condition!
+    }
+    else {
       high=mid;
     }
-      return Optional.empty();
-    }
   }
+   return Optional.empty();
+  }
+}
   //Make sure last one works
