@@ -96,13 +96,12 @@ public class TestSearch {
   }
 
 
-
   // Done TODO: testFindMinFundingArrayFast for several sizes and scenarios
 
   @Test
   public void testFindMinFundingFastArraySimple(){
-    final Team[] arr = makeArrayFixture(10);
-    assertEquals(Optional.ofNullable(2), Search.findTeamMinFundingFast(arr, 250));
+    final Team[] arr = makeArrayFixture(20);
+    assertEquals(Optional.ofNullable(2), Search.findTeamMinFundingFast(arr, 200));
   }
 
   @Test
@@ -114,8 +113,8 @@ public class TestSearch {
 
   @Test
   public void testFindMindFundingFastArrayFailed(){
-    Team[] arr = makeArrayFixture(3);
-    assertEquals(Optional.empty(), Search.findTeamMinFundingFast(arr, 350));
+    Team[] arr = makeArrayFixture(5);
+    assertEquals(Optional.empty(), Search.findTeamMinFundingFast(arr, 550));
   }
 
 }
