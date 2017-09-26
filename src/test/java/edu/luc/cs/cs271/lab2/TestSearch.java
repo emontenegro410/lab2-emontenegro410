@@ -74,43 +74,46 @@ public class TestSearch {
   }
   
   // Done TODO: testFindMinFundingArray for several sizes and scenarios
+ @Test
+  public void testFindMinFundingArray50() {
+    final int funding = 50;
+    final Team[] arr = makeArrayFixture(1);
+    assertTrue(Search.findTeamMinFunding(arr, funding).isPresent());
+  }
+  
   @Test
-  public void testMinFundingArraySimple(){
-    final Team[] arr = makeArrayFixture(10);
-    assertEquals(Optional.ofNullable(2), Search.findTeamMinFunding(arr, 250));
+  public void testFindMinFundingArray150() {
+    final int funding = 150;
+    final Team[] arr = makeArrayFixture(2);
+    assertTrue(Search.findTeamMinFunding(arr, funding).isPresent());
+  }
+  
+  @Test
+  public void testFindMinFundingArray200() {
+    final int funding = 200;
+    final Team[] arr = makeArrayFixture(1);
+    assertFalse(Search.findTeamMinFunding(arr, funding).isPresent());
   }
 
-  @Test
-  public void testMinFundingArrayLong(){
-    final Team[] arr = makeArrayFixture(100);
-    assertEquals(Optional.ofNullable(25), Search.findTeamMinFunding(arr, 2500));
-
-  }
-
-  @Test
-  public void testMindFundingArrayFailed(){
-    Team[] arr = makeArrayFixture(3);
-    assertEquals(Optional.empty(), Search.findTeamMinFunding(arr, 350));
-  }
 
 
   // Done TODO: testFindMinFundingArrayFast for several sizes and scenarios
 
   @Test
-  public void testMinFundingFastArraySimple(){
+  public void testFindMinFundingFastArraySimple(){
     final Team[] arr = makeArrayFixture(10);
     assertEquals(Optional.ofNullable(2), Search.findTeamMinFundingFast(arr, 250));
   }
 
   @Test
-  public void testMinFundingFastArrayLong(){
+  public void testFindMinFundingFastArrayLong(){
     final Team[] arr = makeArrayFixture(100);
     assertEquals(Optional.ofNullable(25), Search.findTeamMinFundingFast(arr, 2500));
 
   }
 
   @Test
-  public void testMindFundingFastArrayFailed(){
+  public void testFindMindFundingFastArrayFailed(){
     Team[] arr = makeArrayFixture(3);
     assertEquals(Optional.empty(), Search.findTeamMinFundingFast(arr, 350));
   }
