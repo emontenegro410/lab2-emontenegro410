@@ -36,6 +36,7 @@ public class TestSearch {
     final Team[] arr = makeArrayFixture(0);
     assertFalse(Search.findTeamPosition(arr, "Team 5").isPresent());
   }
+  
 
   @Test
   public void testFindPositionArray10s() {
@@ -51,26 +52,25 @@ public class TestSearch {
   
   // Done TODO: testFindPositionList0, 10s, 10f
 
-    
-    /* 
-      I know we are suppose to do position 0 but I couldnt get it to work without the failed error message so I took it out ):
-      @Test
-      public void testFindPositionList0(){
-        final ArrayList<Team> list = makeListFixture(0);
-        assertTrue(Search.findTeamPosition(list, "Team 6").isPresent());
-      }
-      */ 
+
+      
+  @Test
+  public void testFindPositionList0(){
+    final ArrayList<Team> list = makeListFixture(0);
+    assertFalse(Search.findTeamPosition(list, "Team 5").isPresent());
+  }
+  
   
   @Test
   public void testFindPositionList10s(){
     final ArrayList<Team> list = makeListFixture(10);
-    assertTrue(Search.findTeamPosition(list, "Team 7").isPresent());
+    assertTrue(Search.findTeamPosition(list, "Team 5").isPresent());
   }
 
   @Test
   public void testFindPositionList10f(){
     final ArrayList<Team> list = makeListFixture(10);
-    assertFalse(Search.findTeamPosition(list, "Team 12").isPresent());
+    assertFalse(Search.findTeamPosition(list, "Team 11").isPresent());
   }
   
   // Done TODO: testFindMinFundingArray for several sizes and scenarios
