@@ -8,8 +8,9 @@
 
 ## What happens in the case of binary search if the array is not sorted?
 
-The binary search is inefficient. It is used when we have a sorted list 
-because it splits the information in the middle. 
+The binary search is inefficient. Binary search is used when we have a sorted list 
+because it searches for the value wanted by starting the search in the middle. Due to the fact it starts the search in the middle the values have to be sorted/in order. 
+If the value is higher than the middle then the search will continue from the middle value as the new low.
 
 ## What is the purpose of constructor argument validity checking?
 
